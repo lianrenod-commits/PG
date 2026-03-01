@@ -26,6 +26,9 @@ const translations = {
     gallery_title: "Galería",
     gallery_hint:  "Reemplazá las imágenes con tus fotos profesionales",
 
+    members_title: "Los Músicos",
+    members_sub:   "Siete voces. Un solo latido.",
+
     media_title:       "Música & Videos",
     track_placeholder: "Demo · Placeholder",
     audio_hint:        "→ Reemplazá con tu archivo de audio",
@@ -71,6 +74,9 @@ const translations = {
     gallery_title: "בילדער",
     gallery_hint:  "טוש אַרײַן דײַנע פּראָפֿעסיאָנעלע פֿאָטאָגראַפֿיעס",
 
+    members_title: "די מוזיקאַנטן",
+    members_sub:   "זיבן קולות. אײן האַרצקלאַפ.",
+
     media_title:       "מוזיק & ווידעאָ",
     track_placeholder: "דעמאָ · פּלאַצהאָלדער",
     audio_hint:        "→ טוש אַרײַן דײַן אוידיאָ-דאַטײ",
@@ -115,6 +121,9 @@ const translations = {
 
     gallery_title: "Gallery",
     gallery_hint:  "Replace with your professional photos",
+
+    members_title: "The Musicians",
+    members_sub:   "Seven voices. One heartbeat.",
 
     media_title:       "Music & Videos",
     track_placeholder: "Demo · Placeholder",

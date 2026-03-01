@@ -62,14 +62,16 @@ body[data-lang="yi"] .media-card::before { left: auto; right: 0; }
   background: none;
   border: 1px solid transparent;
   color: var(--parchment-dark);
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  letter-spacing: 1.5px;
-  padding: 4px 9px;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
   cursor: pointer;
   border-radius: 0;
   transition: color 0.25s, border-color 0.25s, background 0.25s;
   line-height: 1;
+  white-space: nowrap;
 }
 .lang-btn:hover { color: var(--gold-light); }
 .lang-btn.active {
@@ -101,10 +103,20 @@ body.lang-switching * { transition: opacity 0.2s ease !important; }
   border-bottom: 1px solid rgba(201,146,58,0.2);
 }
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--gold);
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+.nav-logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(1.05) sepia(0.15) drop-shadow(0 2px 8px rgba(201,146,58,0.35));
+  transition: filter 0.3s, transform 0.3s;
+}
+.nav-logo-img:hover {
+  filter: brightness(1.15) sepia(0.2) drop-shadow(0 2px 16px rgba(201,146,58,0.6));
+  transform: scale(1.03);
 }
 .nav-links { list-style: none; display: flex; gap: 2.5rem; }
 .nav-links a {
@@ -334,6 +346,114 @@ section { padding: var(--section-pad); }
   border: none;
 }
 
+/* =================== BAND MEMBERS =================== */
+.members-section { padding: var(--section-pad); }
+.members-section .section-caption {
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin-bottom: 4rem;
+  opacity: 0.8;
+}
+
+.members-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.member-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.member-photo-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.member-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease, filter 0.5s ease;
+  filter: sepia(0.25) contrast(1.05);
+}
+
+.member-card:hover .member-photo-wrap img {
+  transform: scale(1.06);
+  filter: sepia(0.1) contrast(1.1) brightness(1.05);
+}
+
+.member-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,146,58,0) 40%, rgba(201,146,58,0.12) 60%, rgba(201,146,58,0) 80%);
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.member-card:hover .member-shimmer { opacity: 1; }
+
+.member-ornament {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  font-size: 1rem;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s, transform 0.4s;
+  text-shadow: 0 0 12px rgba(201,146,58,0.8);
+}
+.member-card:hover .member-ornament { opacity: 0.9; transform: translateY(0); }
+
+/* Lead member — larger, portrait */
+.member-lead {
+  width: 100%;
+}
+.member-lead .member-photo-wrap {
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(201,146,58,0.25);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(201,146,58,0.1);
+}
+
+/* 6 remaining members */
+.members-rest {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.members-rest .member-card .member-photo-wrap {
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(201,146,58,0.18);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Hover border glow */
+.member-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(201,146,58,0);
+  pointer-events: none;
+  transition: border-color 0.4s;
+}
+.member-card:hover::after { border-color: rgba(201,146,58,0.5); }
+
+@media (max-width: 700px) {
+  .members-rest { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .member-lead .member-photo-wrap { aspect-ratio: 4/3; }
+  .members-rest { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+}
+
 /* =================== PRESS =================== */
 .press-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-bottom: 4rem; }
 .press-quote { position: relative; padding: 2rem; border-top: 1px solid rgba(201,146,58,0.3); }
@@ -373,7 +493,18 @@ footer {
   background: var(--deep); border-top: 1px solid rgba(201,146,58,0.15);
   padding: 4rem 5%; text-align: center;
 }
-.footer-logo { font-family: var(--font-display); font-size: 2.5rem; color: var(--gold); letter-spacing: 4px; margin-bottom: 0.5rem; }
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.footer-logo img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0.9) sepia(0.2) drop-shadow(0 2px 12px rgba(201,146,58,0.25));
+  opacity: 0.85;
+}
 .footer-name { font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 3px; color: var(--parchment); margin-bottom: 0.3rem; }
 .footer-sub { font-style: italic; font-size: 0.85rem; color: var(--parchment-dark); opacity: 0.7; margin-bottom: 1.8rem; }
 .footer-links { display: flex; gap: 1.8rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
