@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peretz Garcik — Klezmer & Ídish</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">פ״ג</div>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre / About</a></li>
+      <li><a href="#gallery">Fotos / Photos</a></li>
+      <li><a href="#media">Música / Music</a></li>
+      <li><a href="#press">Prensa / Press</a></li>
+      <li><a href="#contact" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">Sobre / About</a></li>
+      <li><a href="#gallery" class="mobile-link">Fotos / Photos</a></li>
+      <li><a href="#media" class="mobile-link">Música / Music</a></li>
+      <li><a href="#press" class="mobile-link">Prensa / Press</a></li>
+      <li><a href="#contact" class="mobile-link">Contacto / Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-bg">
+      <!-- Replace with your hero image: <img src="your-hero-photo.jpg" alt="Peretz Garcik" /> -->
+      <div class="hero-placeholder">
+        <span>[ Foto principal aquí / Main photo here ]</span>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline reveal">— מוזיק, פּאַסיע, מעמאָריע —</p>
+      <h1 class="hero-title reveal">Peretz<br/><em>Garcik</em></h1>
+      <p class="hero-sub reveal">Klezmer & Ídish · Buenos Aires</p>
+      <div class="hero-divider reveal"></div>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">Contrataciones</a>
+        <a href="#media" class="btn btn-ghost">Escuchar / Listen</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner two-col">
+      <div class="about-text">
+        <h2 class="section-title">Sobre la banda<br/><em>About the band</em></h2>
+        <div class="rule"></div>
+        <p class="lead">
+          Peretz Garcik es una banda de klezmer e ídish nacida en Buenos Aires, dedicada a la preservación y reinterpretación de la música de los judíos del Este europeo.
+        </p>
+        <p>
+          Con raíces en la tradición askenazí y un repertorio que abarca desde melodías de boda hasta canciones de resistencia, la banda lleva el espíritu de los shtetlekh a los escenarios contemporáneos.
+        </p>
+        <hr class="text-divider"/>
+        <p class="lead" lang="en">
+          Peretz Garcik is a klezmer and Yiddish band born in Buenos Aires, devoted to preserving and reimagining the music of Eastern European Jews.
+        </p>
+        <p lang="en">
+          Rooted in Ashkenazi tradition and drawing from a repertoire that spans wedding melodies to songs of resistance, the band carries the spirit of the shtetlekh onto contemporary stages.
+        </p>
+      </div>
+      <div class="about-photo">
+        <!-- Replace with your band photo -->
+        <div class="photo-frame">
+          <div class="photo-placeholder">[ Foto de la banda ]</div>
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="dark-section">
+    <div class="section-inner">
+      <h2 class="section-title centered">Galería<br/><em>Gallery</em></h2>
+      <div class="rule centered"></div>
+      <p class="section-caption centered">Reemplazá las imágenes con tus fotos profesionales · Replace with your professional photos</p>
+
+      <div class="gallery-grid">
+        <!-- Add as many <div class="gallery-item"> as needed. Replace the placeholder divs with <img src="..." alt="..." /> -->
+        <div class="gallery-item tall"><div class="gallery-placeholder">Foto 1</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 2</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 3</div></div>
+        <div class="gallery-item wide"><div class="gallery-placeholder">Foto 4</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 5</div></div>
+        <div class="gallery-item tall"><div class="gallery-placeholder">Foto 6</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 7</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 8</div></div>
+      </div>
+
+      <!-- LIGHTBOX -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button class="lightbox-prev" id="lightboxPrev">‹</button>
+        <div class="lightbox-img-wrap">
+          <img id="lightboxImg" src="" alt="" />
+        </div>
+        <button class="lightbox-next" id="lightboxNext">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner">
+      <h2 class="section-title centered">Música & Videos<br/><em>Music & Videos</em></h2>
+      <div class="rule centered"></div>
+
+      <div class="media-grid">
+        <!-- AUDIO PLAYER 1 -->
+        <div class="media-card audio-card">
+          <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl1">
+              <div class="vinyl-label">PG</div>
+            </div>
+          </div>
+          <div class="audio-info">
+            <h3 class="track-title">Freylekhs in D</h3>
+            <p class="track-sub">Demo / Placeholder</p>
+            <audio controls class="audio-player" id="audio1">
+              <!-- <source src="your-track.mp3" type="audio/mpeg"> -->
+              <p>Tu navegador no soporta audio HTML5.</p>
+            </audio>
+            <p class="media-note">→ Reemplazá con tu archivo de audio</p>
+          </div>
+        </div>
+
+        <!-- AUDIO PLAYER 2 -->
+        <div class="media-card audio-card">
+          <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl2">
+              <div class="vinyl-label">PG</div>
+            </div>
+          </div>
+          <div class="audio-info">
+            <h3 class="track-title">A Nign fun Varshe</h3>
+            <p class="track-sub">Demo / Placeholder</p>
+            <audio controls class="audio-player" id="audio2">
+              <!-- <source src="your-track-2.mp3" type="audio/mpeg"> -->
+              <p>Tu navegador no soporta audio HTML5.</p>
+            </audio>
+            <p class="media-note">→ Reemplazá con tu archivo de audio</p>
+          </div>
+        </div>
+
+        <!-- VIDEO EMBED -->
+        <div class="media-card video-card full-width">
+          <h3 class="track-title centered">En vivo / Live</h3>
+          <div class="video-frame">
+            <!-- Replace with your YouTube/Vimeo embed -->
+            <div class="video-placeholder">
+              <p>Pegá aquí tu embed de YouTube o Vimeo</p>
+              <p class="small">Ej: &lt;iframe src="https://www.youtube.com/embed/TU_ID"...&gt;&lt;/iframe&gt;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press" class="dark-section">
+    <div class="section-inner">
+      <h2 class="section-title centered">Prensa & Kit<br/><em>Press & Media Kit</em></h2>
+      <div class="rule centered"></div>
+
+      <div class="press-grid">
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote>Una experiencia que transporta al alma hacia los rincones más profundos de la memoria colectiva.</blockquote>
+          <cite>— Nombre del Medio, Año</cite>
+        </div>
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote>An experience that transports the soul to the deepest corners of collective memory.</blockquote>
+          <cite>— Publication Name, Year</cite>
+        </div>
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote>Reemplazá estas citas con tus reseñas reales · Replace these with your real press quotes.</blockquote>
+          <cite>— Medio / Publication</cite>
+        </div>
+      </div>
+
+      <div class="press-downloads">
+        <h3>Descargar / Download</h3>
+        <div class="download-links">
+          <a href="#" class="download-btn">↓ Rider Técnico (ES)</a>
+          <a href="#" class="download-btn">↓ Technical Rider (EN)</a>
+          <a href="#" class="download-btn">↓ Bio completa / Full Bio</a>
+          <a href="#" class="download-btn">↓ Fotos de prensa / Press Photos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner contact-inner">
+      <h2 class="section-title centered">Contacto<br/><em>Contact</em></h2>
+      <div class="rule centered"></div>
+      <p class="contact-sub centered">
+        Para contrataciones, prensa y consultas generales<br/>
+        <em>For bookings, press and general inquiries</em>
+      </p>
+
+      <div class="contact-cards">
+        <a href="mailto:banda@peretzgarcik.com" class="contact-card email-card">
+          <div class="contact-icon">✉</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">banda@peretzgarcik.com</div>
+          <div class="contact-hint">Reemplazá con tu email real</div>
+        </a>
+
+        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" class="contact-card whatsapp-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.853L.057 23.428a.5.5 0 00.515.572l5.701-1.494A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.003-1.374l-.36-.213-3.732.978.997-3.645-.234-.376A9.793 9.793 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          </div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">+54 9 11 0000-0000</div>
+          <div class="contact-hint">Reemplazá con tu número real</div>
+        </a>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">פֿ״ג</div>
+    <p class="footer-name">Peretz Garcik</p>
+    <p class="footer-sub">Klezmer & Ídish · Buenos Aires, Argentina</p>
+    <div class="footer-links">
+      <!-- Add your social links here -->
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">YouTube</a>
+      <a href="#" target="_blank">Spotify</a>
+    </div>
+    <p class="footer-copy">© 2026 Peretz Garcik. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
