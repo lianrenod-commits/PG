@@ -185,9 +185,13 @@ function switchLanguage(lang) {
   }, 150);
 }
 
-// Bind all lang buttons (desktop + mobile)
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => switchLanguage(btn.getAttribute('data-lang')));
+// Bind all lang buttons via delegation (desktop + mobile)
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.lang-btn');
+  if (btn) {
+    e.stopPropagation();
+    switchLanguage(btn.getAttribute('data-lang'));
+  }
 });
 
 // =================== NAVBAR ===================

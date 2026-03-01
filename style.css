@@ -152,8 +152,8 @@ body.lang-switching * { transition: opacity 0.2s ease !important; }
   flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
 }
 .mobile-menu.open { display: flex; }
-.mobile-lang { display: flex; align-items: center; gap: 6px; }
-.mobile-lang .lang-btn { font-size: 0.9rem; padding: 6px 14px; }
+.mobile-lang { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.mobile-lang .lang-btn { font-size: 0.85rem; padding: 6px 14px; }
 .mobile-menu ul { list-style: none; text-align: center; }
 .mobile-menu ul li { margin: 1.4rem 0; }
 .mobile-menu ul a {
@@ -347,21 +347,23 @@ section { padding: var(--section-pad); }
 }
 
 /* =================== BAND MEMBERS =================== */
-.members-section { padding: var(--section-pad); }
+.members-section { padding: 60px 5% 70px; }
+.members-section .section-title { font-size: 1.3rem; letter-spacing: 3px; opacity: 0.75; }
+.members-section .rule { opacity: 0.5; }
 .members-section .section-caption {
   font-style: italic;
   color: var(--gold);
-  font-size: 1rem;
-  letter-spacing: 3px;
-  margin-bottom: 4rem;
-  opacity: 0.8;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  opacity: 0.55;
 }
 
 .members-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 1000px;
+  gap: 1rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -382,19 +384,18 @@ section { padding: var(--section-pad); }
   object-fit: cover;
   display: block;
   transition: transform 0.7s ease, filter 0.5s ease;
-  filter: sepia(0.25) contrast(1.05);
+  filter: sepia(0.4) contrast(0.95) brightness(0.85);
 }
 
 .member-card:hover .member-photo-wrap img {
-  transform: scale(1.06);
-  filter: sepia(0.1) contrast(1.1) brightness(1.05);
+  transform: scale(1.04);
+  filter: sepia(0.2) contrast(1.0) brightness(0.95);
 }
 
 .member-shimmer {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(201,146,58,0) 40%, rgba(201,146,58,0.12) 60%, rgba(201,146,58,0) 80%);
-  background-size: 200% 200%;
+  background: linear-gradient(135deg, rgba(201,146,58,0) 40%, rgba(201,146,58,0.08) 60%, rgba(201,146,58,0) 80%);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -402,37 +403,39 @@ section { padding: var(--section-pad); }
 
 .member-ornament {
   position: absolute;
-  bottom: 12px;
-  right: 14px;
-  font-size: 1rem;
+  bottom: 10px;
+  right: 12px;
+  font-size: 0.8rem;
   color: var(--gold);
   opacity: 0;
-  transform: translateY(6px);
+  transform: translateY(4px);
   transition: opacity 0.4s, transform 0.4s;
-  text-shadow: 0 0 12px rgba(201,146,58,0.8);
+  text-shadow: 0 0 8px rgba(201,146,58,0.7);
 }
-.member-card:hover .member-ornament { opacity: 0.9; transform: translateY(0); }
+.member-card:hover .member-ornament { opacity: 0.7; transform: translateY(0); }
 
-/* Lead member — larger, portrait */
+/* Lead member — portrait, full height so person isn't cut */
 .member-lead {
   width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
 }
 .member-lead .member-photo-wrap {
-  aspect-ratio: 16 / 9;
-  border: 1px solid rgba(201,146,58,0.25);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(201,146,58,0.1);
+  aspect-ratio: 3 / 4;
+  border: 1px solid rgba(201,146,58,0.18);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 /* 6 remaining members */
 .members-rest {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0.7rem;
 }
 .members-rest .member-card .member-photo-wrap {
   aspect-ratio: 4 / 5;
-  border: 1px solid rgba(201,146,58,0.18);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  border: 1px solid rgba(201,146,58,0.12);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 /* Hover border glow */
@@ -444,14 +447,14 @@ section { padding: var(--section-pad); }
   pointer-events: none;
   transition: border-color 0.4s;
 }
-.member-card:hover::after { border-color: rgba(201,146,58,0.5); }
+.member-card:hover::after { border-color: rgba(201,146,58,0.35); }
 
 @media (max-width: 700px) {
   .members-rest { grid-template-columns: repeat(2, 1fr); }
+  .member-lead { max-width: 260px; }
 }
 @media (max-width: 480px) {
-  .member-lead .member-photo-wrap { aspect-ratio: 4/3; }
-  .members-rest { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .members-rest { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
 }
 
 /* =================== PRESS =================== */

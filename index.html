@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peretz Garcik — Klezmer & Ídish</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+</head>
+<body data-lang="es">
+
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo"><img src="goldenepg.png" alt="Peretz Garcik" class="nav-logo-img" /></div>
+    <ul class="nav-links">
+      <li><a href="#about"   data-i18n="nav_about">Sobre</a></li>
+      <li><a href="#gallery" data-i18n="nav_gallery">Fotos</a></li>
+      <li><a href="#media"   data-i18n="nav_media">Música</a></li>
+      <li><a href="#press"   data-i18n="nav_press">Prensa</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn active" data-lang="es">Español</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="yi">ייִדיש</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="en">English</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-lang">
+      <button class="lang-btn" data-lang="es">Español</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="yi">ייִדיש</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="en">English</button>
+    </div>
+    <ul>
+      <li><a href="#about"   class="mobile-link" data-i18n="nav_about">Sobre</a></li>
+      <li><a href="#gallery" class="mobile-link" data-i18n="nav_gallery">Fotos</a></li>
+      <li><a href="#media"   class="mobile-link" data-i18n="nav_media">Música</a></li>
+      <li><a href="#press"   class="mobile-link" data-i18n="nav_press">Prensa</a></li>
+      <li><a href="#contact" class="mobile-link" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-bg">
+      <!-- Replace: <img src="your-hero-photo.jpg" alt="Peretz Garcik" /> -->
+      <div class="hero-placeholder"><span>[ Foto principal · Main photo here ]</span></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline reveal">— מוזיק, פּאַסיע, מעמאָריע —</p>
+      <h1 class="hero-title reveal">Peretz<br/><em>Garcik</em></h1>
+      <p class="hero-sub reveal">Klezmer & Ídish · Buenos Aires</p>
+      <div class="hero-divider reveal"></div>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_book">Contrataciones</a>
+        <a href="#media"   class="btn btn-ghost"   data-i18n="hero_cta_listen">Escuchar</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner two-col">
+      <div class="about-text">
+        <h2 class="section-title" data-i18n="about_title">Sobre la banda</h2>
+        <div class="rule"></div>
+        <p class="lead" data-i18n="about_lead">Siete músicos. Instrumentos acústicos. Una música que viene de lejos y llega con todo.</p>
+        <p data-i18n="about_p1">Peretz Garcik toca klezmer e ídish: la música que sonaba en las bodas, los mercados y las plazas del Este europeo judío. Freylachs, bulgars, shers y zhoks — ritmos que hacen mover los pies y también detienen el tiempo.</p>
+        <p data-i18n="about_p2">Con una impronta argentina que le da nueva vida a lo tradicional, la banda propone un viaje verdadero: música que parece venir de antiguas celebraciones comunitarias y que, al mismo tiempo, suena viva y urgente hoy. Energía festiva y emoción profunda, en el mismo aliento.</p>
+        <p data-i18n="about_p3">Un repertorio que invita tanto al baile como a la escucha atenta. La memoria de la diáspora con el pulso de ahora.</p>
+      </div>
+      <div class="about-photo">
+        <div class="photo-frame">
+          <!-- Replace: <img src="band-photo.jpg" alt="Peretz Garcik" /> -->
+          <div class="photo-placeholder">[ Foto de la banda ]</div>
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- BAND MEMBERS -->
+  <section id="members" class="dark-section members-section">
+    <div class="section-inner">
+      <h2 class="section-title centered" data-i18n="members_title">Los Músicos</h2>
+      <div class="rule centered"></div>
+      <p class="section-caption centered" data-i18n="members_sub">Siete voces. Un solo latido.</p>
+      <div class="members-grid">
+        <div class="member-card member-lead">
+          <div class="member-photo-wrap">
+            <img src="y.jpg" alt="Músico principal" />
+            <div class="member-shimmer"></div>
+          </div>
+          <div class="member-ornament">✦</div>
+        </div>
+        <div class="members-rest">
+          <div class="member-card">
+            <div class="member-photo-wrap"><img src="j.jpg" alt="Músico" /><div class="member-shimmer"></div></div>
+            <div class="member-ornament">✦</div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo-wrap"><img src="c.jpg" alt="Músico" /><div class="member-shimmer"></div></div>
+            <div class="member-ornament">✦</div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo-wrap"><img src="l.jpg" alt="Músico" /><div class="member-shimmer"></div></div>
+            <div class="member-ornament">✦</div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo-wrap"><img src="t.jpg" alt="Músico" /><div class="member-shimmer"></div></div>
+            <div class="member-ornament">✦</div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo-wrap"><img src="o.jpg" alt="Músico" /><div class="member-shimmer"></div></div>
+            <div class="member-ornament">✦</div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo-wrap"><img src="k.jpg" alt="Músico" /><div class="member-shimmer"></div></div>
+            <div class="member-ornament">✦</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="dark-section">
+    <div class="section-inner">
+      <h2 class="section-title centered" data-i18n="gallery_title">Galería</h2>
+      <div class="rule centered"></div>
+      <p class="section-caption centered" data-i18n="gallery_hint">Reemplazá las imágenes con tus fotos profesionales</p>
+      <div class="gallery-grid">
+        <div class="gallery-item tall"><div class="gallery-placeholder">Foto 1</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 2</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 3</div></div>
+        <div class="gallery-item wide"><div class="gallery-placeholder">Foto 4</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 5</div></div>
+        <div class="gallery-item tall"><div class="gallery-placeholder">Foto 6</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 7</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 8</div></div>
+      </div>
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button class="lightbox-prev"  id="lightboxPrev">‹</button>
+        <div class="lightbox-img-wrap"><img id="lightboxImg" src="" alt="" /></div>
+        <button class="lightbox-next"  id="lightboxNext">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner">
+      <h2 class="section-title centered" data-i18n="media_title">Música &amp; Videos</h2>
+      <div class="rule centered"></div>
+
+      <div class="media-grid">
+        <!-- AUDIO 1 -->
+        <div class="media-card audio-card">
+          <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl1"><div class="vinyl-label">PG</div></div>
+          </div>
+          <div class="audio-info">
+            <h3 class="track-title">Freylekhs in D</h3>
+            <p class="track-sub" data-i18n="track_placeholder">Demo · Placeholder</p>
+            <audio controls class="audio-player" id="audio1">
+              <!-- <source src="track1.mp3" type="audio/mpeg"> -->
+            </audio>
+            <p class="media-note" data-i18n="audio_hint">→ Reemplazá con tu archivo de audio</p>
+          </div>
+        </div>
+        <!-- AUDIO 2 -->
+        <div class="media-card audio-card">
+          <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl2"><div class="vinyl-label">PG</div></div>
+          </div>
+          <div class="audio-info">
+            <h3 class="track-title">A Nign fun Varshe</h3>
+            <p class="track-sub" data-i18n="track_placeholder">Demo · Placeholder</p>
+            <audio controls class="audio-player" id="audio2">
+              <!-- <source src="track2.mp3" type="audio/mpeg"> -->
+            </audio>
+            <p class="media-note" data-i18n="audio_hint">→ Reemplazá con tu archivo de audio</p>
+          </div>
+        </div>
+
+        <!-- YOUTUBE SHORTS -->
+        <div class="media-card shorts-card full-width">
+          <h3 class="track-title centered" data-i18n="shorts_title">En vivo · Live</h3>
+          <div class="shorts-grid">
+            <div class="short-wrap">
+              <iframe src="https://www.youtube.com/embed/5SDVKTkFxEo"
+                title="Peretz Garcik en vivo 1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="short-wrap">
+              <iframe src="https://www.youtube.com/embed/SGerGGFV29U"
+                title="Peretz Garcik en vivo 2" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="short-wrap">
+              <iframe src="https://www.youtube.com/embed/8mpIz_1QKcE"
+                title="Peretz Garcik en vivo 3" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press" class="dark-section">
+    <div class="section-inner">
+      <h2 class="section-title centered" data-i18n="press_title">Prensa &amp; Kit</h2>
+      <div class="rule centered"></div>
+      <div class="press-grid">
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote data-i18n="press_q1">Una experiencia que transporta al alma hacia los rincones más profundos de la memoria colectiva.</blockquote>
+          <cite data-i18n="press_c1">— Nombre del Medio, Año</cite>
+        </div>
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote data-i18n="press_q2">Música que no te pide que la conozcas de antes — te agarra igual y no te suelta.</blockquote>
+          <cite data-i18n="press_c2">— Nombre del Medio, Año</cite>
+        </div>
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote data-i18n="press_q3">Reemplazá estas citas con tus reseñas reales.</blockquote>
+          <cite data-i18n="press_c3">— Medio / Publication</cite>
+        </div>
+      </div>
+      <div class="press-downloads">
+        <h3 data-i18n="press_download_title">Descargar</h3>
+        <div class="download-links">
+          <a href="#" class="download-btn" data-i18n="dl_rider_es">↓ Rider Técnico (ES)</a>
+          <a href="#" class="download-btn" data-i18n="dl_rider_en">↓ Technical Rider (EN)</a>
+          <a href="#" class="download-btn" data-i18n="dl_bio">↓ Bio completa</a>
+          <a href="#" class="download-btn" data-i18n="dl_photos">↓ Fotos de prensa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner contact-inner">
+      <h2 class="section-title centered" data-i18n="contact_title">Contacto</h2>
+      <div class="rule centered"></div>
+      <p class="contact-sub centered" data-i18n="contact_sub">Para contrataciones, prensa y consultas generales</p>
+      <div class="contact-cards">
+        <a href="/cdn-cgi/l/email-protection#7416151a10153404110611000e131506171d1f5a171b19" class="contact-card email-card">
+          <div class="contact-icon">✉</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><span class="__cf_email__" data-cfemail="f193909f9590b181948394858b96908392989adf929e9c">[email&#160;protected]</span></div>
+          <div class="contact-hint" data-i18n="contact_email_hint">Reemplazá con tu email real</div>
+        </a>
+        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" class="contact-card whatsapp-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.853L.057 23.428a.5.5 0 00.515.572l5.701-1.494A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.003-1.374l-.36-.213-3.732.978.997-3.645-.234-.376A9.793 9.793 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+            </svg>
+          </div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">+54 9 11 0000-0000</div>
+          <div class="contact-hint" data-i18n="contact_wa_hint">Reemplazá con tu número real</div>
+        </a>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><img src="goldenepg.png" alt="Peretz Garcik" /></div>
+    <p class="footer-name">Peretz Garcik</p>
+    <p class="footer-sub">Klezmer & Ídish · Buenos Aires, Argentina</p>
+    <div class="footer-links">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">YouTube</a>
+      <a href="#" target="_blank">Spotify</a>
+    </div>
+    <p class="footer-copy" data-i
