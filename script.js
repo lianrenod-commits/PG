@@ -152,87 +152,79 @@ const translations = {
   }
 };
 
+
 // =================== I18N ENGINE ===================
 let currentLang = 'es';
 
 function applyLanguage(lang) {
-  currentLang = lang;
   const t = translations[lang];
   if (!t) return;
+  currentLang = lang;
 
-  // Update all data-i18n elements
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.textContent = t[key];
   });
 
-  // Update html lang & body dir
-  document.documentElement.lang = lang === 'yi' ? 'yi' : (lang === 'en' ? 'en' : 'es');
+  document.documentElement.lang = lang;
   document.body.setAttribute('data-lang', lang);
 
-  // Update active button state — both desktop and mobile
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
 }
 
-function switchLanguage(lang) {
-  if (lang === currentLang) return;
-  document.body.classList.add('lang-switching');
-  setTimeout(() => {
-    applyLanguage(lang);
-    document.body.classList.remove('lang-switching');
-  }, 150);
-}
-
-// Bind all lang buttons via delegation (desktop + mobile)
-document.addEventListener('click', e => {
-  const btn = e.target.closest('.lang-btn');
-  if (btn) {
-    e.stopPropagation();
-    switchLanguage(btn.getAttribute('data-lang'));
-  }
-});
+// Direct binding — one listener per button, no delegation, no timeouts
+(function bindLangButtons() {
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.onclick = function() {
+      applyLanguage(btn.getAttribute('data-lang'));
+      return false;
+    };
+  });
+})();
 
 // =================== NAVBAR ===================
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
+var navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
 // =================== HERO REVEAL ===================
-setTimeout(() => {
-  document.querySelectorAll('.hero-content .reveal').forEach(el => el.classList.add('visible'));
+setTimeout(function() {
+  document.querySelectorAll('.hero-content .reveal').forEach(function(el) {
+    el.classList.add('visible');
+  });
 }, 200);
 
 // =================== SCROLL REVEAL ===================
-const revealSelectors = [
+var revealSelectors = [
   '#about .section-title', '#about .rule', '#about .about-text p', '#about .about-photo',
   '#gallery .section-title', '#gallery .rule',
   '#media .section-title', '#media .rule', '#media .media-card',
   '#press .section-title', '#press .rule', '#press .press-quote', '#press .press-downloads',
   '#contact .section-title', '#contact .rule', '#contact .contact-sub', '#contact .contact-card',
 ];
-revealSelectors.forEach(sel => {
-  document.querySelectorAll(sel).forEach((el, i) => {
+revealSelectors.forEach(function(sel) {
+  document.querySelectorAll(sel).forEach(function(el, i) {
     el.classList.add('scroll-reveal');
-    el.style.transitionDelay = `${i * 0.08}s`;
+    el.style.transitionDelay = (i * 0.08) + 's';
   });
 });
 
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
+var revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
     if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
   });
 }, { threshold: 0.12 });
-document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el));
+document.querySelectorAll('.scroll-reveal').forEach(function(el) { revealObs.observe(el); });
 
 // Gallery items staggered reveal
-const galleryItems = document.querySelectorAll('.gallery-item');
-const galleryObs = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
+var galleryItems = document.querySelectorAll('.gallery-item');
+var galleryObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e, i) {
     if (e.isIntersecting) {
-      setTimeout(() => {
+      setTimeout(function() {
         e.target.style.opacity = '1';
         e.target.style.transform = 'translateY(0)';
       }, i * 60);
@@ -240,7 +232,7 @@ const galleryObs = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.05 });
-galleryItems.forEach(item => {
+galleryItems.forEach(function(item) {
   item.style.opacity = '0';
   item.style.transform = 'translateY(20px)';
   item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -248,11 +240,12 @@ galleryItems.forEach(item => {
 });
 
 // =================== LIGHTBOX ===================
-const lightbox    = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-let currentIdx = 0, galleryImgs = [];
+var lightbox    = document.getElementById('lightbox');
+var lightboxImg = document.getElementById('lightboxImg');
+var currentIdx  = 0;
+var galleryImgs = [];
 
-const refreshImgs = () => { galleryImgs = Array.from(document.querySelectorAll('.gallery-item img')); };
+function refreshImgs() { galleryImgs = Array.from(document.querySelectorAll('.gallery-item img')); }
 
 function openLightbox(idx) {
   refreshImgs(); if (!galleryImgs.length) return;
@@ -266,20 +259,20 @@ function closeLightbox() { lightbox.classList.remove('open'); document.body.styl
 function showNext() { currentIdx = (currentIdx + 1) % galleryImgs.length; lightboxImg.src = galleryImgs[currentIdx].src; }
 function showPrev() { currentIdx = (currentIdx - 1 + galleryImgs.length) % galleryImgs.length; lightboxImg.src = galleryImgs[currentIdx].src; }
 
-document.querySelector('.gallery-grid').addEventListener('click', e => {
-  const item = e.target.closest('.gallery-item');
+document.querySelector('.gallery-grid').addEventListener('click', function(e) {
+  var item = e.target.closest('.gallery-item');
   if (!item) return;
-  const img = item.querySelector('img');
+  var img = item.querySelector('img');
   if (!img) return;
   refreshImgs();
-  const idx = galleryImgs.indexOf(img);
+  var idx = galleryImgs.indexOf(img);
   if (idx !== -1) openLightbox(idx);
 });
 document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
 document.getElementById('lightboxNext').addEventListener('click', showNext);
 document.getElementById('lightboxPrev').addEventListener('click', showPrev);
-lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', e => {
+lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', function(e) {
   if (!lightbox.classList.contains('open')) return;
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowRight') showNext();
@@ -287,26 +280,26 @@ document.addEventListener('keydown', e => {
 });
 
 // =================== VINYL SPIN ===================
-[{ audio: 'audio1', vinyl: 'vinyl1' }, { audio: 'audio2', vinyl: 'vinyl2' }].forEach(({ audio, vinyl }) => {
-  const a = document.getElementById(audio);
-  const v = document.getElementById(vinyl);
+[{ audio: 'audio1', vinyl: 'vinyl1' }, { audio: 'audio2', vinyl: 'vinyl2' }].forEach(function(pair) {
+  var a = document.getElementById(pair.audio);
+  var v = document.getElementById(pair.vinyl);
   if (!a || !v) return;
-  a.addEventListener('play',  () => v.classList.add('spinning'));
-  a.addEventListener('pause', () => v.classList.remove('spinning'));
-  a.addEventListener('ended', () => v.classList.remove('spinning'));
+  a.addEventListener('play',  function() { v.classList.add('spinning'); });
+  a.addEventListener('pause', function() { v.classList.remove('spinning'); });
+  a.addEventListener('ended', function() { v.classList.remove('spinning'); });
 });
 
 // =================== MOBILE MENU ===================
-const hamburger  = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
+var hamburger  = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobileMenu');
 
-hamburger.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
+hamburger.addEventListener('click', function() {
+  var open = mobileMenu.classList.toggle('open');
   hamburger.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
 });
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => {
+document.querySelectorAll('.mobile-link').forEach(function(link) {
+  link.addEventListener('click', function() {
     mobileMenu.classList.remove('open');
     hamburger.classList.remove('open');
     document.body.style.overflow = '';
@@ -314,13 +307,15 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 });
 
 // =================== ACTIVE NAV ===================
-const sections = document.querySelectorAll('section[id], header[id]');
-const navLinks  = document.querySelectorAll('.nav-links a');
-const sectionObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
+var sections = document.querySelectorAll('section[id], header[id]');
+var navLinks  = document.querySelectorAll('.nav-links a');
+var sectionObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
     if (e.isIntersecting) {
-      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${e.target.id}`));
+      navLinks.forEach(function(l) {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
+      });
     }
   });
 }, { threshold: 0.4 });
-sections.forEach(s => sectionObs.observe(s));
+sections.forEach(function(s) { sectionObs.observe(s); });
