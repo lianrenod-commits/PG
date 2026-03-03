@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peretz Garcik — Klezmer & Ídish</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+</head>
+<body data-lang="es">
+
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo"><img src="goldenepg.png" alt="Peretz Garcik" class="nav-logo-img" /></div>
+    <ul class="nav-links">
+      <li><a href="#about"   data-i18n="nav_about">Sobre</a></li>
+      <li><a href="#gallery" data-i18n="nav_gallery">Fotos</a></li>
+      <li><a href="#media"   data-i18n="nav_media">Música</a></li>
+      <li><a href="#press"   data-i18n="nav_press">Prensa</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn active" data-lang="es">Español</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="yi">ייִדיש</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="en">English</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-lang">
+      <button class="lang-btn" data-lang="es">Español</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="yi">ייִדיש</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" data-lang="en">English</button>
+    </div>
+    <ul>
+      <li><a href="#about"   class="mobile-link" data-i18n="nav_about">Sobre</a></li>
+      <li><a href="#gallery" class="mobile-link" data-i18n="nav_gallery">Fotos</a></li>
+      <li><a href="#media"   class="mobile-link" data-i18n="nav_media">Música</a></li>
+      <li><a href="#press"   class="mobile-link" data-i18n="nav_press">Prensa</a></li>
+      <li><a href="#contact" class="mobile-link" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-bg">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="herovid.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap reveal">
+        <img src="goldenepg.png" alt="Peretz Garcik" class="hero-logo" />
+      </div>
+      <p class="hero-tagline reveal">לידער פֿון ייִדישלאַנד</p>
+      <p class="hero-sub reveal">Canciones de la Ídishland</p>
+      <div class="hero-divider reveal"></div>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_book">Contrataciones</a>
+        <a href="#media"   class="btn btn-ghost"   data-i18n="hero_cta_listen">Escuchar</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner two-col">
+      <div class="about-text">
+        <h2 class="section-title" data-i18n="about_title">Acerca de Peretz Garcik</h2>
+        <div class="rule"></div>
+        <p class="lead" data-i18n="about_lead">Peretz Garcik nace en Buenos Aires como una banda de klezmer e ídish que rehúye los lugares comunes: su sonido es acústico, preciso y desbordante a la vez.</p>
+        <p data-i18n="about_p1">Siete músicos (voz, flauta, violín, mandolina/balalaika, acordeón, contrabajo y batería) combinan tradición y energía contemporánea para crear conciertos que funcionan igual de bien en una sala de concierto que en la pista de baile.</p>
+        <p data-i18n="about_p2">La propuesta es honesta y visceral: instrumentos acústicos que dialogan como una conversación antigua puesta al día, una voz que cuenta historias y un pulso rítmico que invita a moverse. Ideal para programaciones culturales, festivales y noches donde se busca una experiencia que conmueva y haga bailar.</p>
+        <p data-i18n="about_p3">Activos en la escena local de Buenos Aires, su show destaca por la precisión instrumental, la calidez vocal y la capacidad de transformar al público en cómplice.</p>
+      </div>
+      <div class="about-photo">
+        <div class="photo-frame">
+          <!-- Replace: <img src="band-photo.jpg" alt="Peretz Garcik" /> -->
+          <div class="photo-placeholder">[ Foto de la banda ]</div>
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- BAND MEMBERS -->
+  <section id="members" class="dark-section members-section">
+    <div class="section-inner">
+      <div class="members-mosaic">
+        <div class="member-tile tile-lead">
+          <img src="y.jpg" alt="Músico" />
+        </div>
+        <div class="member-tile"><img src="j.jpg" alt="Músico" /></div>
+        <div class="member-tile"><img src="l.jpg" alt="Músico" /></div>
+        <div class="member-tile"><img src="c.jpg" alt="Músico" /></div>
+        <div class="member-tile"><img src="o.jpg" alt="Músico" /></div>
+        <div class="member-tile"><img src="t.jpg" alt="Músico" /></div>
+        <div class="member-tile"><img src="k.jpg" alt="Músico" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="dark-section">
+    <div class="section-inner">
+      <h2 class="section-title centered" data-i18n="gallery_title">Galería</h2>
+      <div class="rule centered"></div>
+      <p class="section-caption centered" data-i18n="gallery_hint">Reemplazá las imágenes con tus fotos profesionales</p>
+      <div class="gallery-grid">
+        <div class="gallery-item tall"><div class="gallery-placeholder">Foto 1</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 2</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 3</div></div>
+        <div class="gallery-item wide"><div class="gallery-placeholder">Foto 4</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 5</div></div>
+        <div class="gallery-item tall"><div class="gallery-placeholder">Foto 6</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 7</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">Foto 8</div></div>
+      </div>
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button class="lightbox-prev"  id="lightboxPrev">‹</button>
+        <div class="lightbox-img-wrap"><img id="lightboxImg" src="" alt="" /></div>
+        <button class="lightbox-next"  id="lightboxNext">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner">
+      <h2 class="section-title centered" data-i18n="media_title">Música &amp; Videos</h2>
+      <div class="rule centered"></div>
+
+      <div class="media-grid">
+
+        <!-- SINGLE ALE BRIDER -->
+        <div class="media-card single-card full-width">
+          <div class="single-inner">
+            <div class="single-cover-wrap">
+              <img src="ALEBRIDER.jpg" alt="Ale Brider — Peretz Garcik" class="single-cover" />
+            </div>
+            <div class="single-info">
+              <p class="single-eyebrow">✦ Nuevo Single</p>
+              <h3 class="single-title">Ale Brider</h3>
+              <p class="single-title-yi">אַלע ברידער</p>
+              <p class="single-sub">Disponible en todas las plataformas</p>
+              <div class="platform-links">
+                <a href="https://open.spotify.com/artist/peretzgarcik" target="_blank" rel="noopener" class="platform-btn spotify">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                  Spotify
+                </a>
+                <a href="https://music.apple.com/search?term=peretz+garcik" target="_blank" rel="noopener" class="platform-btn apple">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  Apple Music
+                </a>
+                <a href="https://www.youtube.com/results?search_query=peretz+garcik+ale+brider" target="_blank" rel="noopener" class="platform-btn youtube">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                  YouTube
+                </a>
+                <a href="https://deezer.com/search/peretz%20garcik" target="_blank" rel="noopener" class="platform-btn deezer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.944 17.773h3.388v-1.166h-3.388zm0-2.777h3.388v-1.165h-3.388zm0-2.777h3.388V11.05h-3.388zm0-2.777h3.388V8.272h-3.388zM14.111 17.773H17.5v-1.166h-3.389zm0-2.777H17.5v-1.165h-3.389zm0-2.777H17.5V11.05h-3.389zm0-2.777H17.5V8.272h-3.389zm0-2.777H17.5V5.494h-3.389zM9.278 17.773h3.389v-1.166H9.278zm0-2.777h3.389v-1.165H9.278zm0-2.777h3.389V11.05H9.278zm0-2.777h3.389V8.272H9.278zM4.444 17.773h3.39v-1.166h-3.39zm0-2.777h3.39v-1.165h-3.39zm0-2.777h3.39V11.05h-3.39zM-.001 17.773H3.39v-1.166H-.001zm0-2.777H3.39v-1.165H-.001z"/></svg>
+                  Deezer
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AUDIO 1 -->
+        <div class="media-card audio-card">
+          <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl1"><div class="vinyl-label">PG</div></div>
+          </div>
+          <div class="audio-info">
+            <h3 class="track-title">Freylekhs in D</h3>
+            <p class="track-sub" data-i18n="track_placeholder">Demo · Placeholder</p>
+            <audio controls class="audio-player" id="audio1">
+              <!-- <source src="track1.mp3" type="audio/mpeg"> -->
+            </audio>
+            <p class="media-note" data-i18n="audio_hint">→ Reemplazá con tu archivo de audio</p>
+          </div>
+        </div>
+        <!-- AUDIO 2 -->
+        <div class="media-card audio-card">
+          <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl2"><div class="vinyl-label">PG</div></div>
+          </div>
+          <div class="audio-info">
+            <h3 class="track-title">A Nign fun Varshe</h3>
+            <p class="track-sub" data-i18n="track_placeholder">Demo · Placeholder</p>
+            <audio controls class="audio-player" id="audio2">
+              <!-- <source src="track2.mp3" type="audio/mpeg"> -->
+            </audio>
+            <p class="media-note" data-i18n="audio_hint">→ Reemplazá con tu archivo de audio</p>
+          </div>
+        </div>
+
+        <!-- YOUTUBE SHORTS -->
+        <div class="media-card shorts-card full-width">
+          <h3 class="track-title centered" data-i18n="shorts_title">En vivo · Live</h3>
+          <div class="shorts-grid">
+            <div class="short-wrap">
+              <iframe src="https://www.youtube.com/embed/5SDVKTkFxEo"
+                title="Peretz Garcik en vivo 1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="short-wrap">
+              <iframe src="https://www.youtube.com/embed/SGerGGFV29U"
+                title="Peretz Garcik en vivo 2" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="short-wrap">
+              <iframe src="https://www.youtube.com/embed/8mpIz_1QKcE"
+                title="Peretz Garcik en vivo 3" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press" class="dark-section">
+    <div class="section-inner">
+      <h2 class="section-title centered" data-i18n="press_title">Prensa &amp; Kit</h2>
+      <div class="rule centered"></div>
+      <div class="press-grid">
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote data-i18n="press_q1">Una experiencia que transporta al alma hacia los rincones más profundos de la memoria colectiva.</blockquote>
+          <cite data-i18n="press_c1">— Nombre del Medio, Año</cite>
+        </div>
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote data-i18n="press_q2">Música que no te pide que la conozcas de antes — te agarra igual y no te suelta.</blockquote>
+          <cite data-i18n="press_c2">— Nombre del Medio, Año</cite>
+        </div>
+        <div class="press-quote">
+          <span class="quote-mark">"</span>
+          <blockquote data-i18n="press_q3">Reemplazá estas citas con tus reseñas reales.</blockquote>
+          <cite data-i18n="press_c3">— Medio / Publication</cite>
+        </div>
+      </div>
+      <div class="press-downloads">
+        <h3 data-i18n="press_download_title">Descargar</h3>
+        <div class="download-links">
+          <a href="#" class="download-btn" data-i18n="dl_rider_es">↓ Rider Técnico (ES)</a>
+          <a href="#" class="download-btn" data-i18n="dl_rider_en">↓ Technical Rider (EN)</a>
+          <a href="#" class="download-btn" data-i18n="dl_bio">↓ Bio completa</a>
+          <a href="#" class="download-btn" data-i18n="dl_photos">↓ Fotos de prensa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="section-inner contact-inner">
+      <h2 class="section-title centered" data-i18n="contact_title">Contacto</h2>
+      <div class="rule centered"></div>
+      <p class="contact-sub centered" data-i18n="contact_sub">Para contrataciones, prensa y consultas generales</p>
+      <div class="contact-cards">
+        <a href="/cdn-cgi/l/email-protection#8defece3e9eccdfde8ffe8f9f7eaecffeee4e6a3eee2e0" class="contact-card email-card">
+          <div class="contact-icon">✉</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><span class="__cf_email__" data-cfemail="9cfefdf2f8fddcecf9eef9e8e6fbfdeefff5f7b2fff3f1">[email&#160;protected]</span></div>
+          <div class="contact-hint" data-i18n="contact_email_hint">Reemplazá con tu email real</div>
+        </a>
+        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" class="contact-card whatsapp-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.853L.057 23.428a.5.5 0 00.515.572l5.701-1.494A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.003-1.374l-.36-.213-3.732.978.997-3.645-.234-.376A9.793 9.793 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+            </svg>
+          </div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">+54 9 11 0000-0000</div>
+          <div class="contact-hint" data-i18n="contact_wa_hint">Reemplazá con tu número real</div>
+        </a>
+      </div>
+    </div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><img src="goldenepg.png" alt="Peretz Garcik" /></div>
+    <p class="footer-name">Peretz Garcik</p>
+    <p class="footer-sub">Klezmer & Ídish · Buenos Aires, Argentina</p>
+    <div class="footer-links">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">YouTube</a>
+      <a href="#" target="_blank">Spotify</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer_copy">© 2026 Peretz Garcik. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
